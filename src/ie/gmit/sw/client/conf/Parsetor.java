@@ -3,11 +3,11 @@ package ie.gmit.sw.client.conf;
 
 public class Parsetor {
 
-	public static final String CONF = "conf.xml";
+	public static final String CONF = "config.xml";
 	private String username;
-	private String hosts;
-	private String diror;
-	private int portnum;
+	private String host;
+	private String dir;
+	private int port;
 	
 	
 	public Parsetor() {
@@ -27,36 +27,36 @@ public class Parsetor {
 	// Getter & Setter for hosts
 	/*=======================================================================================	*/
 	public String getHosts() {
-		return hosts;
+		return host;
 	}
 	public void setHosts(String host) {
-		this.hosts = host;
+		this.host = host;
 	}
 	/*=======================================================================================	*/
 	
 	// Getter & Setter for diro
 	/*=======================================================================================	*/
 	public String getDiror() {
-		return diror;
+		return dir;
 	}
 	public void setDiror(String dir) {
-		this.diror = dir;
+		this.dir = dir;
 	}
 	/*=======================================================================================	*/
 	
 	// Getter & Setter for port
 	/*=======================================================================================	*/
 	public int getPortnum() {
-		return portnum;
+		return port;
 	}
 	public void setPortnum(int port) {
-		this.portnum = port;
+		this.port = port;
 	}
 	/*=======================================================================================	*/
 	
 	@Override
 	public String toString() {
-		return "Parsetor [username = " + username + ", host = " + hosts + ", port = " + portnum + ", dir = " + diror + "]";
+		return "Parsetor [username = " + username + ", host = " + host + ", port = " + port + ", dir = " + dir + "]";
 	}// end override
 
 }//end class
