@@ -43,7 +43,7 @@ public class FileServer {
 			
 			Scanner console = new Scanner(System.in);
 
-			System.out.print("Enter file to download: ");
+			System.out.print("Enter file download: ");
 			String files = console.next();
 			
 			
