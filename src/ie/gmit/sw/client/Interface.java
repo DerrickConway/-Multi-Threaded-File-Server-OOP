@@ -8,10 +8,10 @@ public class Interface {
 	public int pick;
 
 	public Interface(){
-
+		//System.out.println("----------MENU---------------");
 	}
 	
-	
+	//getter and setter for pick
 /*=======================================================================================	*/
 	public void setChoice(int pick) {
 		this.pick = pick;
@@ -20,6 +20,7 @@ public class Interface {
 		return pick;
 	}
 /*=======================================================================================	*/
+	//user picks from menu
 	public void menu() {
 		System.out.println("----------MENU---------------");
 		System.out.println("\n1- Connect to Server");
@@ -29,9 +30,10 @@ public class Interface {
 		System.out.println("-----------------------------");
 	}
 
+	//whatever has been selected in menu
 	public int option(){
 		pick = console.nextInt();
 		return pick;
-	}
+	}//end option
 	
-}
+}//end class

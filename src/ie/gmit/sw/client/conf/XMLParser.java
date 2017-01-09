@@ -13,7 +13,7 @@ public class XMLParser {
 		this.x = x;
 	}
 	
-	public void init() throws Throwable{
+	public void parse() throws Throwable{
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db = dbf.newDocumentBuilder();
 		Document doc = db.parse(Parsetor.CONF);
@@ -21,7 +21,7 @@ public class XMLParser {
 		Element root = doc.getDocumentElement();
 		NodeList children = root.getChildNodes(); 
 	
-		for (int i = 0; i < children.getLength(); i++){ //Loop over the child nodes
+		for (int i = 0; i < children.getLength(); i++){ 
 		
 			Node next = children.item(i); 
 			
@@ -55,7 +55,7 @@ public class XMLParser {
 		
 	} 
 
-	
+	// Getter & Setter for parsetor x
 	public void setx(Parsetor x) {
 		this.x = x;
 	}
@@ -64,4 +64,4 @@ public class XMLParser {
 	}
 
 	
-}
+}//end class

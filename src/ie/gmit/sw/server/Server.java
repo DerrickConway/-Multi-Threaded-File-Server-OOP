@@ -6,26 +6,29 @@ import java.net.*;
 
 public class Server {
 
-	private ServerSocket serverSock; 
+	private ServerSocket serverSocket; 
 	private static final int PORT = 7777;  
-	private volatile boolean keepRunning = true;
+	private volatile boolean Running = true;
 	
 	public Server()
 	{
 		try 
 		{ 
-			serverSock = new ServerSocket(PORT);
+			serverSocket = new ServerSocket(PORT);
 			Thread serverThread = new Thread(new Listing(), "Server Listing");
 			serverThread.setPriority(Thread.MAX_PRIORITY); 
 			serverThread.start();
 			
-			System.out.println("Server is listening" + PORT);
+			System.out.println("Server listening" + PORT);
 			
-		} catch (IOException e) 
+		} 
+		
+		catch (IOException e) 
 		{
 			System.out.println("Error " + e.getMessage());
 		}
-	} // end private Server method
+	
+	} //end server
 	
 	
 	
@@ -39,22 +42,21 @@ public class Server {
 			
 			int count = 0; 
 			
-			while (keepRunning){ 
+			while (Running){ 
 				try { 
-					Socket socket = serverSock.accept();
-					//new Thread(new HTTPRequest(socket), "T-" + count).start(); 
+					Socket socket = serverSocket.accept();
 					count++; 
 				} catch (IOException e) { 
 					System.out.println("Error - " + e.getMessage());
 				}
 			} 
 			
-		} 
+		} //end of run
 		
-	}
+	}//end listing
 	
 	private class HTTPRequest implements Runnable{
-		//private Socket sock; 
+		
 
 		private HTTPRequest(Socket request) { 
 			
@@ -64,6 +66,6 @@ public class Server {
          
         } 
 		
-	} 
+	} //end of http
 	
-}
+}//end class

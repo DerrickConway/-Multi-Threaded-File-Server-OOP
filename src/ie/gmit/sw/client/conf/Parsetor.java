@@ -5,16 +5,16 @@ public class Parsetor {
 
 	public static final String CONF = "conf.xml";
 	private String username;
-	private String host;
-	private String dir;
-	private int port;
+	private String hosts;
+	private String diror;
+	private int portnum;
 	
 	
 	public Parsetor() {
 		super();
-	}
+	}// end super
 	
-	// Getters & Setters
+	// Getter & Setter for user name
 	/*=======================================================================================	*/
 	public String getUsername() {
 		return username;
@@ -24,36 +24,39 @@ public class Parsetor {
 	}
 	/*=======================================================================================	*/
 	
+	// Getter & Setter for hosts
 	/*=======================================================================================	*/
 	public String getHosts() {
-		return host;
+		return hosts;
 	}
 	public void setHosts(String host) {
-		this.host = host;
+		this.hosts = host;
 	}
 	/*=======================================================================================	*/
 	
+	// Getter & Setter for diro
 	/*=======================================================================================	*/
 	public String getDiror() {
-		return dir;
+		return diror;
 	}
 	public void setDiror(String dir) {
-		this.dir = dir;
+		this.diror = dir;
 	}
 	/*=======================================================================================	*/
 	
+	// Getter & Setter for port
 	/*=======================================================================================	*/
 	public int getPortnum() {
-		return port;
+		return portnum;
 	}
 	public void setPortnum(int port) {
-		this.port = port;
+		this.portnum = port;
 	}
 	/*=======================================================================================	*/
 	
 	@Override
 	public String toString() {
-		return "Parsetor [username = " + username + ", host = " + host + ", port = " + port + ", dir = " + dir + "]";
-	}
+		return "Parsetor [username = " + username + ", host = " + hosts + ", port = " + portnum + ", dir = " + diror + "]";
+	}// end override
 
-}
+}//end class

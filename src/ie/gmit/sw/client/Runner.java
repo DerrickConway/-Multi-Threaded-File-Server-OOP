@@ -14,7 +14,7 @@ static Scanner console = new Scanner(System.in);
 		
 		Parsetor p = new Parsetor();
 		XMLParser xmlp = new XMLParser(p);
-		xmlp.init();
+		xmlp.parse();
 		
 		System.out.println(p);
 		
@@ -23,32 +23,41 @@ static Scanner console = new Scanner(System.in);
 		FileServer file = new FileServer();
 
 		u.menu(); 
-		
+		//while loop
 		while(u.pick != 4){
-			
+			//select between 1-4 n menu
 			System.out.println("\nSelect option [1 - 4]");
 			u.pick = console.nextInt();
 			
+			// user pick 1 it connect to serever
 			if(u.pick == 1){
 				Server server = new Server();
-				c.openConnection();
+				c.Connection();
 			} 
+			
+			// if user picks 2 files available for download
 			else if(u.pick == 2){
 				System.out.println("Files Available for Download:");				
 				FileServer.listDownloadableFiles();
 				
 			} 
+			
+			//if picks 3 shows download files
 			else if(u.pick == 3){
 				
 				
 			}
+			
+			//if user pick 4 it quits the program
 			else if(u.pick == 4) {
 				RunnerConnection.closeConnection(); // exit
 				System.out.println("exit");
 			} 
-			else { // just in case user tries an invalid option
+			
+			//if user picks a wrong number gwtes user to pick again
+			else { 
 				System.out.println("Select option [1 - 4]");
-				u.pick = console.nextInt(); //user to enter option again
+				u.pick = console.nextInt(); 
 			}
 			
 		} // End while
