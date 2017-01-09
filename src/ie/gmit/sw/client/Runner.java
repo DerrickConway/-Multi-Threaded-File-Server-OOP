@@ -20,7 +20,7 @@ static Scanner console = new Scanner(System.in);
 		
 		Interface u = new Interface();
 		RunnerConnection c = new RunnerConnection();
-		FileServer file = new FileServer();
+		FileServer files = new FileServer();
 
 		u.menu(); 
 		/**
@@ -38,10 +38,10 @@ static Scanner console = new Scanner(System.in);
 				c.Connection();
 			} 
 			
-			// if user picks 2 files available for download
+			// if user picks 2 files available
 			else if(u.pick == 2){
-				System.out.println("Files Available for Download:");				
-				FileServer.listDownloadableFiles();
+				System.out.println("Files Available:");				
+				FileServer.listFiles();
 				
 			} 
 			

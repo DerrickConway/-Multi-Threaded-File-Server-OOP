@@ -30,12 +30,10 @@ public class FileServer {
 			
 		}// close fileserver
 		
-		public static void listDownloadableFiles(){
+		public static void listFiles(){
 		
 		    for (int i = 0; i < files.length; i++) {
-			      
-		    	if (files[i].isFile()) 
-		    		System.out.println("file names	" + files[i].getName());
+			     
 		      
 		    }//close for
 		    
@@ -46,7 +44,7 @@ public class FileServer {
 			Scanner console = new Scanner(System.in);
 
 			System.out.print("Enter file to download: ");
-			String file = console.next();
+			String files = console.next();
 			
 			
 		} // end download file
