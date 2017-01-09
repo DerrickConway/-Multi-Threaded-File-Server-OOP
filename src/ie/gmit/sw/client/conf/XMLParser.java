@@ -20,7 +20,9 @@ public class XMLParser {
 		
 		Element root = doc.getDocumentElement();
 		NodeList children = root.getChildNodes(); 
-	
+	/**
+	 * generating nodes
+	 */
 		for (int i = 0; i < children.getLength(); i++){ 
 		
 			Node next = children.item(i); 
@@ -55,6 +57,10 @@ public class XMLParser {
 		
 	} 
 
+	/**
+	 * Grtters and setters for parsetor
+	 * @param x
+	 */
 	// Getter & Setter for parsetor x
 	public void setx(Parsetor x) {
 		this.x = x;

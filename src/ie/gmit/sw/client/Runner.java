@@ -23,6 +23,9 @@ static Scanner console = new Scanner(System.in);
 		FileServer file = new FileServer();
 
 		u.menu(); 
+		/**
+		 * while loop for menu
+		 */
 		//while loop
 		while(u.pick != 4){
 			//select between 1-4 n menu

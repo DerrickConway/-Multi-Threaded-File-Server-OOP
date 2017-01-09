@@ -10,8 +10,10 @@ public class Server {
 	private static final int PORT = 7777;  
 	private volatile boolean Running = true;
 	
+	
 	public Server()
 	{
+		
 		try 
 		{ 
 			serverSocket = new ServerSocket(PORT);
@@ -25,6 +27,7 @@ public class Server {
 		
 		catch (IOException e) 
 		{
+			
 			System.out.println("Error " + e.getMessage());
 		}
 	
@@ -56,7 +59,10 @@ public class Server {
 	}//end listing
 	
 	private class HTTPRequest implements Runnable{
-		
+		/**
+		 * trying to make HTTP
+		 * @param request
+		 */
 
 		private HTTPRequest(Socket request) { 
 			

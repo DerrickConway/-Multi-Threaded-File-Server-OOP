@@ -7,6 +7,9 @@ import java.util.Scanner;
 public class FileServer {
 	
 		//create a file directory with arrays
+	/**
+	 * making directory to file and arrays
+	 */
 	 private static File directory = new File("src/ie/gmit/sw/server"); 
 		private static File[] files = directory.listFiles();
 		

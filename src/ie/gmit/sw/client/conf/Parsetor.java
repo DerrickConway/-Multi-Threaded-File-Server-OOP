@@ -14,6 +14,10 @@ public class Parsetor {
 		super();
 	}// end super
 	
+	/**
+	 * creating getters and setters for username, host, dir, port
+	 * @return
+	 */
 	// Getter & Setter for user name
 	/*=======================================================================================	*/
 	public String getUsername() {

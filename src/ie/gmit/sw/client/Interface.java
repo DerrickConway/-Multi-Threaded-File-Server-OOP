@@ -10,7 +10,10 @@ public class Interface {
 	public Interface(){
 		//System.out.println("----------MENU---------------");
 	}
-	
+	/**
+	 * get and set for menu
+	 * @param pick
+	 */
 	//getter and setter for pick
 /*=======================================================================================	*/
 	public void setChoice(int pick) {
@@ -30,6 +33,10 @@ public class Interface {
 		System.out.println("-----------------------------");
 	}
 
+	/**
+	 * returning what has been selected from the menu
+	 * @return
+	 */
 	//whatever has been selected in menu
 	public int option(){
 		pick = console.nextInt();
